@@ -39,7 +39,7 @@
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} --- \textit{#2} & \textit{\small #3} \\
     \multicolumn{2}{l}{\small #4}
-  \end{tabular*}\vspace{-4pt}
+  \end{tabular*}\vspace{-10 pt}
 }
 
 \newcommand{\resumeSubheadingSimple}[3]{
@@ -47,15 +47,102 @@
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} & \textit{\small #2} \\
     \multicolumn{2}{l}{\small\textit{#3}}
-  \end{tabular*}\vspace{-4pt}
+  \end{tabular*}\vspace{1pt}
 }
 
-\newcommand{\resumeItem}[1]{\item\small{#1}\vspace{-2pt}}
+\newcommand{\resumeItem}[1]{\item\small{#1}\vspace{-1pt}}
 
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=16pt, label=\textbullet, topsep=0pt, parsep=0pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}} % Reduced negative spacing
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{4pt}}
 
-% ... (rest of preamble is unchanged)
+% ---------- HYPERLINK SETUP ----------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=linkblue,
+  urlcolor=linkblue,
+  pdfauthor={Noel Sason},
+  pdftitle={Noel Sason - Resume},
+}
+
+% ==========================================
+%              DOCUMENT BEGIN
+% ==========================================
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+  {\Huge\bfseries\color{headerblue} Noel Sason} \\[6pt]
+  \small
+  \faIcon{envelope}\;\href{mailto:noel_sason@berkeley.edu}{noel\_sason@berkeley.edu} \quad
+  \faIcon{phone}\;(661) 523-9570 \quad
+  \faIcon{map-marker-alt}\;Berkeley, CA \quad
+  \faIcon{github}\;\href{https://github.com/noelsason}{GitHub}
+\end{center}
+
+\vspace{-10pt}
+
+% ---------- EDUCATION ----------
+\section{Education}
+\resumeSubheading
+  {University of California, Berkeley}
+  {B.A. Molecular Biology \textbar\ B.S. Data Science}
+  {Aug 2024 -- May 2028}
+  {GPA: 3.82 / 4.00}
+
+\vspace{10pt}
+
+% ---------- EXPERIENCE ----------
+\section{Experience}
+
+\resumeSubheading
+  {COPE Health Scholar}{Kaiser Permanente, Woodland Hills}{Jun 2025 -- Present}{}
+\resumeItemListStart
+  \resumeItem{Delivered direct patient support across 5+ clinical departments including emergency, surgical, and outpatient units, accumulating \textbf{100+ hours} of hands-on clinical experience.}
+  \resumeItem{Responded to call lights and assisted nursing staff with vital sign monitoring, patient mobility, and discharge preparation, improving unit workflow efficiency.}
+  \resumeItem{Collaborated with interdisciplinary care teams of physicians, nurses, and technicians to coordinate patient-centered care during high-volume shifts.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Finance Director}{ASUC Berkeley, South Asian Ad Hoc Office}{Aug 2025 -- Present}{}
+\resumeItemListStart
+  \resumeItem{Directed annual budget of \textbf{\$10K+} for a university-recognized student government body, overseeing fund allocation, expense tracking, and vendor payments.}
+  \resumeItem{Spearheaded fundraising campaigns in partnership with campus organizations, increasing funding pipeline and ensuring 100\% financial transparency through detailed reporting.}
+  \resumeItem{Collaborated with a 10-member executive team to align financial strategy with programming goals for \textbf{500+ constituents}.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Finance Director}{South Indian Society, UC Berkeley}{Sept 2024 -- Present}{}
+\resumeItemListStart
+  \resumeItem{Managed end-to-end budgeting, reimbursements, and vendor negotiations for a \textbf{100+ member} cultural organization.}
+  \resumeItem{Redesigned financial tracking systems by implementing standardized spreadsheets and approval workflows, reducing reimbursement processing time by \textbf{40\%}.}
+  \resumeItem{Led fundraising initiatives that increased organizational funding, enabling expanded event programming across 2 semesters.}
+\resumeItemListEnd
+
+% ---------- PROJECTS ----------
+\section{Projects}
+
+\resumeSubheadingSimple
+  {Canvascope --- Privacy-First Academic Search Engine}
+  {\href{https://canvascope.org}{canvascope.org}}
+  {Founder \& Lead Developer}
+\resumeItemListStart
+  \resumeItem{Built and launched a Chrome extension that indexes Canvas LMS content, enabling students to search across all courses, assignments, and files in \textbf{under 1 second}.}
+  \resumeItem{Engineered a custom search algorithm with fuzzy matching, abbreviation expansion, and relevance scoring using JavaScript, achieving \textbf{sub-100ms} query response times.}
+  \resumeItem{Scaled to \textbf{10+ university domains} with a modular architecture; grew to \textbf{50+ active users} within the first week of launch.}
+  \resumeItem{Ensured full data privacy --- all processing runs locally with zero external API calls or telemetry.}
+\resumeItemListEnd
+
+\resumeSubheadingSimple
+  {ChemTutor}{}{Python Developer}
+\resumeItemListStart
+  \resumeItem{Developed an interactive Python tutoring program covering acid-base chemistry and thermodynamics with \textbf{50+ adaptive practice problems} and targeted misconception feedback.}
+\resumeItemListEnd
+
+\resumeSubheadingSimple
+  {BillSplitter}{}{Web Developer}
+\resumeItemListStart
+  \resumeItem{Designed and built a responsive web application for splitting group expenses, supporting itemized bills, tax/tip calculations, and multi-user settlement tracking.}
+\resumeItemListEnd
 
 % ---------- TECHNICAL SKILLS ----------
 \section{Technical Skills}
