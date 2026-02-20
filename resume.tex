@@ -7,7 +7,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage{mathptmx} % Professional Times font
 \usepackage[margin=0.5in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -35,25 +35,23 @@
 
 % ---------- CUSTOM COMMANDS ----------
 \newcommand{\resumeSubheading}[4]{
-  \vspace{1pt}
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
-    \textbf{#1} --- \textit{#2} & \textit{\small #3} \\
+    \textbf{#1} --- \textit{#2} & \small #3 \\
     \multicolumn{2}{l}{\small #4}
-  \end{tabular*}\vspace{-10 pt}
+  \end{tabular*}\vspace{-12pt}
 }
 
 \newcommand{\resumeSubheadingSimple}[3]{
-  \vspace{1pt}
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
-    \textbf{#1} & \textit{\small #2} \\
+    \textbf{#1} & \small #2 \\
     \multicolumn{2}{l}{\small\textit{#3}}
   \end{tabular*}\vspace{1pt}
 }
 
-\newcommand{\resumeItem}[1]{\item\small{#1}\vspace{-1pt}}
+\newcommand{\resumeItem}[1]{\item\small{#1}\vspace{-2pt}}
 
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=16pt, label=\textbullet, topsep=0pt, parsep=0pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{4pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=16pt, label=\textbullet, topsep=0pt, parsep=0pt, itemsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
 
 % ---------- HYPERLINK SETUP ----------
 \hypersetup{
@@ -79,79 +77,77 @@
   \faIcon{github}\;\href{https://github.com/noelsason}{GitHub}
 \end{center}
 
-\vspace{-10pt}
+\vspace{-15pt}
 
 % ---------- EDUCATION ----------
 \section{Education}
 \resumeSubheading
   {University of California, Berkeley}
-  {B.A. Molecular Biology \textbar\ B.S. Data Science}
+  {B.A. Molecular Biology \textbar\ B.A. Data Science}
   {Aug 2024 -- May 2028}
   {GPA: 3.82 / 4.00}
 
-\vspace{10pt}
+\vspace{4pt}
 
 % ---------- EXPERIENCE ----------
 \section{Experience}
 
-\resumeSubheading
-  {COPE Health Scholar}{Kaiser Permanente, Woodland Hills}{Jun 2025 -- Present}{}
-\resumeItemListStart
-  \resumeItem{Delivered direct patient support across 5+ clinical departments including emergency, surgical, and outpatient units, accumulating \textbf{100+ hours} of hands-on clinical experience.}
-  \resumeItem{Responded to call lights and assisted nursing staff with vital sign monitoring, patient mobility, and discharge preparation, improving unit workflow efficiency.}
-  \resumeItem{Collaborated with interdisciplinary care teams of physicians, nurses, and technicians to coordinate patient-centered care during high-volume shifts.}
-\resumeItemListEnd
 
 \resumeSubheading
   {Finance Director}{ASUC Berkeley, South Asian Ad Hoc Office}{Aug 2025 -- Present}{}
 \resumeItemListStart
   \resumeItem{Directed annual budget of \textbf{\$10K+} for a university-recognized student government body, overseeing fund allocation, expense tracking, and vendor payments.}
-  \resumeItem{Spearheaded fundraising campaigns in partnership with campus organizations, increasing funding pipeline and ensuring 100\% financial transparency through detailed reporting.}
-  \resumeItem{Collaborated with a 10-member executive team to align financial strategy with programming goals for \textbf{500+ constituents}.}
+  \resumeItem{Led contingency funding, reimbursement workflows, and Wellness Fee submissions with ASUC offices, maintaining compliance across \textbf{89+} tracked funding questions and deadlines.}
+  \resumeItem{Authored a multi-phase MHISA funding proposal with timeline, evaluation metrics, and sustainability plan; coordinated with CAPS and executive stakeholders on implementation.}
 \resumeItemListEnd
 
 \resumeSubheading
   {Finance Director}{South Indian Society, UC Berkeley}{Sept 2024 -- Present}{}
 \resumeItemListStart
   \resumeItem{Managed end-to-end budgeting, reimbursements, and vendor negotiations for a \textbf{100+ member} cultural organization.}
-  \resumeItem{Redesigned financial tracking systems by implementing standardized spreadsheets and approval workflows, reducing reimbursement processing time by \textbf{40\%}.}
-  \resumeItem{Led fundraising initiatives that increased organizational funding, enabling expanded event programming across 2 semesters.}
+  \resumeItem{Redesigned financial tracking systems with standardized spreadsheets and approval workflows, reducing reimbursement processing time by \textbf{40\%}.}
+  \resumeItem{Owned event budget execution for cultural programming (including Dosas \& Mimosas and menstrual equity initiatives), improving spending visibility and accountability.}
 \resumeItemListEnd
 
 % ---------- PROJECTS ----------
 \section{Projects}
 
 \resumeSubheadingSimple
-  {Canvascope --- Privacy-First Academic Search Engine}
+  {Canvascope Ecosystem (Canvascope, NoteVault, SwipeWipe, Lectra)}
   {\href{https://canvascope.org}{canvascope.org}}
-  {Founder \& Lead Developer}
+  {Founder / CEO / Lead Developer}
 \resumeItemListStart
-  \resumeItem{Built and launched a Chrome extension that indexes Canvas LMS content, enabling students to search across all courses, assignments, and files in \textbf{under 1 second}.}
-  \resumeItem{Engineered a custom search algorithm with fuzzy matching, abbreviation expansion, and relevance scoring using JavaScript, achieving \textbf{sub-100ms} query response times.}
-  \resumeItem{Scaled to \textbf{10+ university domains} with a modular architecture; grew to \textbf{50+ active users} within the first week of launch.}
-  \resumeItem{Ensured full data privacy --- all processing runs locally with zero external API calls or telemetry.}
+  \resumeItem{Founded and built a privacy-first Chrome extension platform for Canvas LMS indexing/search with fuzzy matching, semantic retrieval (LLM embeddings), and local-first processing.}
+  \resumeItem{Expanding into a unified ecosystem with an in-development iOS application for rapid thought capture, utilizing automated categorization and real-time backend synchronization with the Chrome extension.}
+  \resumeItem{Managed Vercel deployments, GitHub release/version workflows, and Chrome Web Store compliance while scaling to \textbf{10+ university domains}.}
+  \resumeItem{Led startup strategy across product and operations: authored mission/roadmap documentation, defined role structure (CPO/CFO/CMO), and drafted equity/vesting governance plans.}
 \resumeItemListEnd
 
 \resumeSubheadingSimple
-  {ChemTutor}{}{Python Developer}
+  {KG-Microbe Bioinformatics Pipelines}{}{Research Apprentice / Independent Researcher}
 \resumeItemListStart
-  \resumeItem{Developed an interactive Python tutoring program covering acid-base chemistry and thermodynamics with \textbf{50+ adaptive practice problems} and targeted misconception feedback.}
+  \resumeItem{Processed large-scale microbial datasets (GTDB, NCBI, TSV, JSONL) to reshape trait profiles, generate analysis-ready tables, and standardize metadata.}
+  \resumeItem{Built reproducible scripts for taxonomy mapping, data validation, and trait-inference pipelines; diagnosed data corruption and format inconsistencies.}
+  \resumeItem{Used Git LFS and branch-based workflows for large-file versioning, repository migration, and collaborative research reproducibility.}
 \resumeItemListEnd
 
 \resumeSubheadingSimple
-  {BillSplitter}{}{Web Developer}
+  {Homelab Infrastructure \& Finance Knowledge Automation}{}{Systems Engineer / Builder}
 \resumeItemListStart
-  \resumeItem{Designed and built a responsive web application for splitting group expenses, supporting itemized bills, tax/tip calculations, and multi-user settlement tracking.}
+  \resumeItem{Built a Raspberry Pi 5 NAS on OpenMediaVault with Docker services, backup planning, SSH administration, and network-level troubleshooting across DNS/DHCP/router integration.}
+  \resumeItem{Deployed privacy and remote-access tooling (Pi-hole, Tailscale) and resolved DNS conflicts through log-driven debugging and safe service rollback procedures.}
+  \resumeItem{Created a personal finance knowledge agent with structured markdown directories, query storage, and Codex-assisted automation for institutional documentation workflows.}
 \resumeItemListEnd
 
 % ---------- TECHNICAL SKILLS ----------
 \section{Technical Skills}
 
-\vspace{2pt}
+\vspace{-2pt}
 \small
 \begin{tabular*}{\textwidth}{@{}l@{\hskip 12pt}l@{}}
-  \textbf{Languages \& Tools:} & Python, SQL, JavaScript, HTML/CSS, Git/GitHub \\
-  \textbf{Data Science:} & Data Analysis, Data Visualization, Pandas, NumPy, Jupyter Notebooks \\
+  \textbf{Languages \& Tools:} & Python, Java, SQL, JavaScript, HTML/CSS, Git/GitHub \\
+  \textbf{Data \& ML:} & Data Analysis, Pandas, NumPy, Jupyter, Semantic Search, Embeddings (MPNet), ONNX Runtime Web \\
+  \textbf{Infrastructure:} & Docker, Linux, OpenMediaVault, Raspberry Pi, DNS/DHCP, SSH, Tailscale, Vercel, Supabase \\
   \textbf{Productivity:} & Microsoft Excel (Pivot Tables, VBA, Advanced Functions), Google Workspace \\
 \end{tabular*}
 
