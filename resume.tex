@@ -37,15 +37,13 @@
 \newcommand{\resumeSubheading}[4]{
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
     \textbf{#1} --- \textit{#2} & \small #3 \\
-    \multicolumn{2}{l}{\small #4}
-  \end{tabular*}\vspace{-12pt}
+    \ifx&#4&\else \multicolumn{2}{l}{\small #4} \\ \fi
+  \end{tabular*}\vspace{2pt}
 }
-
-\newcommand{\resumeSubheadingSimple}[3]{
+\newcommand{\resumeSubheadingSimple}[2]{
   \begin{tabular*}{\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
-    \textbf{#1} & \small #2 \\
-    \multicolumn{2}{l}{\small\textit{#3}}
-  \end{tabular*}\vspace{1pt}
+    \textbf{#1} & \small #2
+  \end{tabular*}\vspace{3pt}
 }
 
 \newcommand{\resumeItem}[1]{\item\small{#1}\vspace{-2pt}}
@@ -83,72 +81,80 @@
 \section{Education}
 \resumeSubheading
   {University of California, Berkeley}
-  {B.A. Molecular Biology \textbar\ B.A. Data Science}
+  {B.A. Molecular Biology \textbar\ B.S. Data Science}
   {Aug 2024 -- May 2028}
-  {GPA: 3.82 / 4.00}
+  {GPA: 3.82 / 4.00 \textbar\ \textbf{Relevant Coursework:} CS61B (Data Structures \& Algorithms), Bioengineering 10}
 
 \vspace{4pt}
 
 % ---------- EXPERIENCE ----------
 \section{Experience}
 
+\resumeSubheading
+  {COPE Health Scholar}{Kaiser Permanente, Woodland Hills}{Jun 2025 -- Present}{}
+\resumeItemListStart
+  \resumeItem{Deliver direct clinical support across high-acuity units including the Emergency Department, telemetry, and outpatient surgery; accumulate 100+ hours of hands-on patient care.}
+  \resumeItem{Monitor patient vitals, perform safety assessments (fall risks), and assist nursing staff with mobilization, hygiene, and discharge logistics to streamline unit workflow.}
+\resumeItemListEnd
 
 \resumeSubheading
   {Finance Director}{ASUC Berkeley, South Asian Ad Hoc Office}{Aug 2025 -- Present}{}
 \resumeItemListStart
-  \resumeItem{Directed annual budget of \textbf{\$10K+} for a university-recognized student government body, overseeing fund allocation, expense tracking, and vendor payments.}
-  \resumeItem{Led contingency funding, reimbursement workflows, and Wellness Fee submissions with ASUC offices, maintaining compliance across \textbf{89+} tracked funding questions and deadlines.}
-  \resumeItem{Authored a multi-phase MHISA funding proposal with timeline, evaluation metrics, and sustainability plan; coordinated with CAPS and executive stakeholders on implementation.}
+  \resumeItem{Direct a \textbf{\$10K+} annual budget for a university-mandated student government body, overseeing fund allocation, internal expense tracking, and large-scale vendor payments.}
+  \resumeItem{Oversee contingency funding and Wellness Fee submissions, maintaining strict compliance across \textbf{89+} tracked deadlines and university financial governance requirements.}
 \resumeItemListEnd
 
 \resumeSubheading
   {Finance Director}{South Indian Society, UC Berkeley}{Sept 2024 -- Present}{}
 \resumeItemListStart
-  \resumeItem{Managed end-to-end budgeting, reimbursements, and vendor negotiations for a \textbf{100+ member} cultural organization.}
-  \resumeItem{Redesigned financial tracking systems with standardized spreadsheets and approval workflows, reducing reimbursement processing time by \textbf{40\%}.}
-  \resumeItem{Owned event budget execution for cultural programming (including Dosas \& Mimosas and menstrual equity initiatives), improving spending visibility and accountability.}
+  \resumeItem{Manage end-to-end budgeting and reimbursements for a \textbf{100+ member} organization; redesigned financial tracking systems, reducing reimbursement processing latency by \textbf{40\%}.}
+  \resumeItem{Standardized financial record-keeping with automated audit trails, improving transparency and enabling data-driven spending forecasts for upcoming fiscal cycles.}
 \resumeItemListEnd
 
 % ---------- PROJECTS ----------
 \section{Projects}
 
 \resumeSubheadingSimple
-  {Canvascope Ecosystem (Canvascope, NoteVault, SwipeWipe, Lectra)}
-  {\href{https://canvascope.org}{canvascope.org}}
-  {Founder / CEO / Lead Developer}
+  {MedSphere}{Next.js 15, TypeScript, Supabase}
 \resumeItemListStart
-  \resumeItem{Founded and built a privacy-first Chrome extension platform for Canvas LMS indexing/search with fuzzy matching, semantic retrieval (LLM embeddings), and local-first processing.}
-  \resumeItem{Expanding into a unified ecosystem with an in-development iOS application for rapid thought capture, utilizing automated categorization and real-time backend synchronization with the Chrome extension.}
-  \resumeItem{Managed Vercel deployments, GitHub release/version workflows, and Chrome Web Store compliance while scaling to \textbf{10+ university domains}.}
-  \resumeItem{Led startup strategy across product and operations: authored mission/roadmap documentation, defined role structure (CPO/CFO/CMO), and drafted equity/vesting governance plans.}
+  \resumeItem{Built a full-stack health platform featuring a live FDA drug label lookup API and real-time Supabase chat for patient-provider communication simulations.}
+  \resumeItem{Developed a multi-source healthcare jobs aggregator leveraging Greenhouse, Lever, and RSS APIs; implemented server-side filtering for rapid, domain-specific search results.}
 \resumeItemListEnd
 
 \resumeSubheadingSimple
-  {KG-Microbe Bioinformatics Pipelines}{}{Research Apprentice / Independent Researcher}
+  {MedMatch (MSAR Prerequisite Engine)}{Next.js 16, Supabase, Vitest}
 \resumeItemListStart
-  \resumeItem{Processed large-scale microbial datasets (GTDB, NCBI, TSV, JSONL) to reshape trait profiles, generate analysis-ready tables, and standardize metadata.}
-  \resumeItem{Built reproducible scripts for taxonomy mapping, data validation, and trait-inference pipelines; diagnosed data corruption and format inconsistencies.}
-  \resumeItem{Used Git LFS and branch-based workflows for large-file versioning, repository migration, and collaborative research reproducibility.}
+  \resumeItem{Engineered a sophisticated matching engine that evaluates medical school eligibility across 159 institutions by comparing user coursework against 1,162 AAMC requirements.}
+  \resumeItem{Built a custom PDF ETL pipeline to ingest and normalize the 2026 MSAR dataset; implemented credit-hour conversion logic and school-specific policy evaluation (e.g., AP/IB credit pooling).}
 \resumeItemListEnd
 
 \resumeSubheadingSimple
-  {Homelab Infrastructure \& Finance Knowledge Automation}{}{Systems Engineer / Builder}
+  {Lectra (iPad PDF Annotation)}{Swift, SwiftUI, Apple Pencil}
 \resumeItemListStart
-  \resumeItem{Built a Raspberry Pi 5 NAS on OpenMediaVault with Docker services, backup planning, SSH administration, and network-level troubleshooting across DNS/DHCP/router integration.}
-  \resumeItem{Deployed privacy and remote-access tooling (Pi-hole, Tailscale) and resolved DNS conflicts through log-driven debugging and safe service rollback procedures.}
-  \resumeItem{Created a personal finance knowledge agent with structured markdown directories, query storage, and Codex-assisted automation for institutional documentation workflows.}
+  \resumeItem{Developed a native iOS application for Apple Pencil annotation, featuring a custom \textbf{DropBridge v2} file transfer protocol for seamless document sharing with the \textbf{Canvascope} ecosystem.}
+  \resumeItem{Implemented real-time backend synchronization using Supabase, enabling cross-platform access to annotated PDFs and intelligent categorization of handwritten notes.}
+  \resumeItem{Optimized PDF rendering and stroke capture for low-latency feedback on iPad Pro displays, providing a paper-like experience for clinical and academic note-taking.}
 \resumeItemListEnd
 
-% ---------- TECHNICAL SKILLS ----------
-\section{Technical Skills}
+\resumeSubheadingSimple
+  {Canvascope Ecosystem --- \small\href{https://canvascope.org}{canvascope.org}}{Founder / Lead Developer}
+\resumeItemListStart
+  \resumeItem{Founded a privacy-first Chrome extension platform for Canvas LMS indexing and semantic search, scaling to \textbf{10+ university domains} with local-first processing and sub-100ms fuzzy matching.}
+  \resumeItem{Built an integrated ecosystem with automated document categorization and LLM embeddings for intelligent retrieval, serving as the central hub for Lectra and other productivity sub-products.}
+  \resumeItem{Manage end-to-side product strategy: authored roadmap documentation, defined role structures, and overseen Vercel deployments for a unified, cross-platform student productivity suite.}
+\resumeItemListEnd
+
+% Double checking for any remaining ClearLedger items - none found.
+
+% ---------- TECHNICAL SKILLS & CERTIFICATIONS ----------
+\section{Technical Skills \& Certifications}
 
 \vspace{-2pt}
 \small
 \begin{tabular*}{\textwidth}{@{}l@{\hskip 12pt}l@{}}
-  \textbf{Languages \& Tools:} & Python, Java, SQL, JavaScript, HTML/CSS, Git/GitHub \\
-  \textbf{Data \& ML:} & Data Analysis, Pandas, NumPy, Jupyter, Semantic Search, Embeddings (MPNet), ONNX Runtime Web \\
-  \textbf{Infrastructure:} & Docker, Linux, OpenMediaVault, Raspberry Pi, DNS/DHCP, SSH, Tailscale, Vercel, Supabase \\
-  \textbf{Productivity:} & Microsoft Excel (Pivot Tables, VBA, Advanced Functions), Google Workspace \\
+  \textbf{Languages \& Tools:} & Python, Java, SQL, JavaScript, HTML/CSS, Git, Swift/SwiftUI, Docker, Linux, Raspberry Pi \\
+  \textbf{Data \& ML:} & Pandas, NumPy, Jupyter, Semantic Search, Embeddings (MPNet), PDF ETL, Algorithm Design \\
+  \textbf{Certifications:} & \textbf{American Heart Association BLS (Basic Life Support)} \\
 \end{tabular*}
 
 \end{document}
