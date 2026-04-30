@@ -49,7 +49,7 @@
 \newcommand{\resumeItem}[1]{\item\small{#1}\vspace{-2pt}}
 
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=16pt, label=\textbullet, topsep=0pt, parsep=0pt, itemsep=0pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{6pt}}
 
 % ---------- HYPERLINK SETUP ----------
 \hypersetup{
@@ -93,41 +93,31 @@
 \resumeSubheading
   {Research Affiliate}{Lawrence Berkeley National Laboratory}{Jan 2026 -- Present}{}
 \resumeItemListStart
-  \resumeItem{Built Python data pipelines to transform microbial trait data from KG-Microbe, GTDB, NCBI, and study outputs into standardized wide and long TSV tables for downstream search and comparative analysis.}
-  \resumeItem{Implemented aggregation, normalization, and validation logic for heterogeneous bioinformatics datasets, including feature summarization, cross-database table merging, row/trait reshaping, and automated tests to ensure analysis-ready outputs.}
+  \resumeItem{Built a DuckDB-backed analysis pipeline over the KG-Microbe knowledge graph, enabling fast SQL-based traversal across taxa, chemicals (CHEBI), environments (ENVO), anatomical sites (UBERON), and phenotypic traits for 80+ disease--microbiome studies.}
+  \resumeItem{Wrote study-generation scripts that transform BugSigDB differential-abundance exports into per-study directories of increased/decreased taxa lists keyed to NCBI Taxon IDs, covering colorectal cancer, lung cancer, epilepsy, and skin wound cohorts.}
+  \resumeItem{Designed a YAML-driven trait-profile generator that parses analysis results across all study directories and emits wide and long TSV tables (study $\times$ phenotype) for downstream statistical analysis and cross-cohort meta-analysis.}
+  \resumeItem{Standardized reproducible workflows with Justfile task runners, uv-managed Python environments, and authored technical documentation; shipped via PR-based collaboration on GitHub with multiple merged contributions.}
 \resumeItemListEnd
 
 \resumeSubheading
-  {Finance Director}{ASUC Berkeley, South Asian Ad Hoc Office}{Aug 2025 -- Present}{}
+  {Finance Director}{Various Roles within the ASUC}{Sept 2024 -- Present}{}
 \resumeItemListStart
-  \resumeItem{Direct an annual budget for a university-mandated student government body, overseeing fund allocation, internal expense tracking, and large-scale vendor payments.}
-  \resumeItem{Oversee contingency funding and Wellness Fee submissions, maintaining strict compliance across  89+ tracked deadlines and university financial governance requirements.}
-\resumeItemListEnd
-
-\resumeSubheading
-  {Finance Director}{South Indian Society, UC Berkeley}{Sept 2024 -- Present}{}
-\resumeItemListStart
-  \resumeItem{Manage end-to-end budgeting and reimbursements for a 100+ member organization; redesigned financial tracking systems, reduced reimbursement processing latency.}
-  \resumeItem{Standardized financial record-keeping with automated audit trails, improving transparency and enabling data-driven spending forecasts for upcoming fiscal cycles.}
+  \resumeItem{Serve as Finance Director for the South Asian Ad Hoc Committee and the South Indian Society at UC Berkeley, managing combined budgets and end-to-end fund allocation across both organizations.}
+  \resumeItem{Administer approximately \$200,000 in funding through CASSA, evaluating and awarding grants to student-led proposals across campus while ensuring compliance with ASUC financial governance.}
+  \resumeItem{Redesigned financial tracking and reimbursement systems with automated audit trails, reducing processing latency and enabling data-driven spending forecasts for upcoming fiscal cycles.}
 \resumeItemListEnd
 
 % ---------- PROJECTS ----------
 \section{Projects}
 \resumeSubheadingSimple
-  {Canvascope  --- \small\href{https://canvascope.org}{canvascope.org}}{Founder / CEO}
+  {Canvascope \& Lectra --- \small\href{https://canvascope.org}{canvascope.org}}{Founder / CEO / Lead Developer}
 \resumeItemListStart
-  \resumeItem{Founded a privacy-first Chrome extension platform for Canvas and Brightspace LMS indexing and semantic search, scaling to 10+ university domains with local-first processing and sub-100ms fuzzy matching.}
-  \resumeItem{Built an integrated ecosystem with automated document categorization and LLM embeddings for intelligent retrieval, serving as the central hub for Lectra (See Above) and other productivity sub-products (Like MedMatch).}
-  \resumeItem{Manage product strategy: authored roadmap documentation, defined role structures, and overseen Vercel deployments for a unified, cross-platform student productivity suite.}
+  \resumeItem{Founded a privacy-first academic productivity platform spanning a Chrome extension (Manifest V3) and a native iOS companion app, scaling to 10+ university Canvas domains with local-first indexing and sub-100ms semantic search.}
+  \resumeItem{Architected intent-aware search that surfaces distributed course materials (assignments, files, pages) from a single query, backed by LLM embeddings and automated document categorization across multi-course environments.}
+  \resumeItem{Developed Lectra, a native iOS/iPad app with Apple Pencil annotation and a custom DropBridge file-transfer protocol; built Supabase backend for real-time cross-device sync of annotated PDFs and course data.}
+  \resumeItem{Led end-to-end product lifecycle---roadmap planning, compliance, Chrome Web Store deployment, Vercel hosting, and go-to-market positioning---designing the architecture for future mobile and ecosystem integrations.}
 \resumeItemListEnd
 
-\resumeSubheadingSimple
-  {Lectra --- \small\href{https://canvascope.org}{canvascope.org}}{Swift, SwiftUI, iOS Development}
-\resumeItemListStart
-  \resumeItem{Developed a native iOS application for Apple Pencil annotation, featuring a custom DropBridge v2 file transfer protocol for seamless document sharing with the Canvascope ecosystem.}
-  \resumeItem{Implemented real-time backend synchronization using Supabase, enabling cross-platform access to annotated PDFs and intelligent categorization of handwritten notes.}
-  \resumeItem{Optimized PDF rendering and stroke capture for low-latency feedback on iPad Pro displays, providing a paper-like experience for clinical and academic note-taking.}
-\resumeItemListEnd
 \resumeSubheadingSimple
   {RxBrief --- \small\href{https://www.rxbrief.org/}{rxbrief.org}}{Next.js, Javascript, Supabase}
 \resumeItemListStart
@@ -137,17 +127,18 @@
 \resumeItemListEnd
 
 \resumeSubheadingSimple
-  {MedMatch --- \small\href{https://medmatch.canvascope.org/}{medmatch.canvascope.org}}{Next.js, Supabase, Javascript}
+  {Engineering Automation Pipeline}{GitHub Actions, Apps Script, Python}
 \resumeItemListStart
-  \resumeItem{Engineered a sophisticated matching engine that evaluates medical school eligibility across 159 institutions by comparing user coursework against 1,162 AAMC requirements.}
-  \resumeItem{Built a custom PDF ETL pipeline to ingest and normalize the 2026 MSAR dataset; implemented credit-hour conversion logic and school-specific policy evaluation (e.g., AP/IB credit pooling).}
-  \resumeItem{Integrated with Canvascope environment (See Above) to pull courses from current Canvas courses student is enrolled in.}
+  \resumeItem{Built a GitHub-based bug intake and triage automation system integrating Google Forms, Sheets, and Apps Script to auto-generate structured issues with priority labels (P1--P3) and project board tracking.}
+  \resumeItem{Designed CI/CD-style workflows with GitHub Actions for automated polling, JSON export to repo, and structured issue labeling; maintained lifecycle columns (New, Ready, In Progress, Blocked, Done) for engineering operations.}
 \resumeItemListEnd
 
-
-
-
-% Double checking for any remaining ClearLedger items - none found.
+\resumeSubheadingSimple
+  {SIS Community App --- \small South Indian Society, UC Berkeley}{Swift, SwiftUI, Supabase}
+\resumeItemListStart
+  \resumeItem{Developing a native iOS app for a 100+ member student organization, featuring event management with Stripe payment integration, a shared photo album system backed by Cloudflare R2, and real-time messaging for member engagement.}
+  \resumeItem{Architected a Supabase backend with role-based access control for leadership vs.\ general members, enabling committee-scoped file archives, push notifications, and centralized org operations replacing fragmented tools.}
+\resumeItemListEnd
 
 % ---------- TECHNICAL SKILLS & CERTIFICATIONS ----------
 \section{Technical Skills \& Certifications}
@@ -156,7 +147,7 @@
 \small
 \begin{tabular*}{\textwidth}{@{}l@{\hskip 12pt}l@{}}
   \textbf{Languages \& Tools:} & Python, Java, SQL, JavaScript, HTML/CSS, Git, Swift/SwiftUI, Docker, Linux, Raspberry Pi \\
-  \textbf{Data \& ML:} & Pandas, NumPy, Jupyter, Semantic Search, Embeddings (MPNet), PDF ETL, Algorithm Design \\
+  \textbf{Data \& Platforms:} & DuckDB, Pandas, NumPy, Supabase, Stripe, Cloudflare R2, Semantic Search, GitHub Actions, Vercel \\
   \textbf{Certifications:} & \textbf{American Heart Association BLS (Basic Life Support)} \\
 \end{tabular*}
 
