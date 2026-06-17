@@ -39,8 +39,8 @@
 
 \newcommand{\resumeItem}[1]{\item\small{#1}}
 
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=16pt, label=\textbullet, topsep=0pt, parsep=0pt, itemsep=3pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=16pt, label=\textbullet, topsep=0pt, parsep=0pt, itemsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{1pt}}
 
 \hypersetup{
   colorlinks=true,
@@ -66,8 +66,8 @@
 \section{Education}
 \resumeSubheading
   {University of California, Berkeley}
-  {B.A. Molecular Biology \textbar\ B.S. Data Science}
-  {Aug 2024 -- May 2028}
+  {B.A. Molecular Biology \textbar\ B.A. Data Science}
+  {Aug 2024 -- Dec 2027}
   {GPA: 3.8 / 4.0 \textbar\ \textbf{Relevant Coursework:} CS61B (Data Structures \& Algorithms), Math 54 (Linear Algebra), Data 8 (Foundations of Data Science --- Statistics \& Probability), Data C88C (Computational Structures in Data Science)}
 
 \vspace{-2pt}
@@ -97,7 +97,6 @@
   \resumeItem{Achieved citation-grounded AI responses, as measured by every answer linking to its source document, by designing a RAG pipeline that indexes course PDFs, pages, and assignments into vector embeddings and retrieves relevant context at query time.}
   \resumeItem{Reduced cloud inference costs and improved user privacy by integrating Chrome's built-in Gemini Nano for on-device AI and building personalized learning workflows that adapt to a student's academic background and learning style.}
   \resumeItem{Enabled cross-device study workflows by developing Lectra (iOS/iPad) with Apple Pencil annotation, DropBridge --- a custom high-speed cross-device file-transfer protocol --- and a Supabase backend for real-time sync of annotated PDFs.}
-  \resumeItem{Improved search relevance and UI engagement, as measured by A/B experiments across 10+ universities, by conducting user interviews and usability studies and iterating on ranking, categorization, and interface design.}
   \resumeItem{Built PersonalGraph, a TypeScript MCP server that gives AI assistants a persistent personal knowledge graph --- 15 tools/resources, a four-tier visibility lattice with secret redaction and sensitive-topic auto-classification, crash-safe atomic writes, and an append-only audit log.}
 \resumeItemListEnd
 
@@ -109,22 +108,24 @@
 \resumeItemListEnd
 
 \resumeSubheadingSimple
-  {SIS Community App --- \small South Indian Society, UC Berkeley}{Co-President}
+  {CLENS --- \small DataHacks 2026, Scripps Challenge Track}{Software Engineer}
 \resumeItemListStart
-  \resumeItem{Onboarded 40 beta testers from a 200+ member student organization by developing a native iOS app with Stripe-integrated event management, a Cloudflare R2--backed shared photo album, and real-time messaging for member engagement.}
-  \resumeItem{Replaced 4+ fragmented tools with a single platform, as measured by leadership adoption for all org operations, by architecting a Supabase backend with role-based access control, committee-scoped file archives, and push notifications.}
+  \resumeItem{Built an iOS app that scores grocery purchases on ocean health by training a binary CoreML classifier on 400+ images to auto-detect receipts vs. product barcodes at 6 fps, using a custom hysteresis state machine to dynamically route the scanning camera UI.}
+  \resumeItem{Generated a live marine stress index by processing Scripps CCE2 mooring datasets over OPeNDAP, applying STL seasonal decomposition and an Isolation Forest to flag anomalies that dynamically penalize high-impact items.}
+  \resumeItem{Enabled on-device footprint scoring by programming a zero-dependency ridge regression model in Python that codegens Swift coefficients to predict CO2, runoff, water, and plastic impact, wired to Apple Vision OCR, a Flask API, and a Supabase database.}
 \resumeItemListEnd
 
 \section{Technical Skills \& Certifications}
 
 \vspace{-2pt}
 \small
-\begin{tabular*}{\textwidth}{@{}l@{\hskip 12pt}l@{}}
-  \textbf{Languages:} & Python, Java, Swift/SwiftUI, JavaScript, SQL, HTML5/CSS \\
-  \textbf{ML \& Data:} & PyTorch, scikit-learn, Pandas, NumPy, DuckDB, MongoDB, embeddings \& vector search \\
+\begin{tabular}{@{}l@{\hskip 12pt}p{5.75in}@{}}
+  \textbf{Languages:} & Python, Java, Swift/SwiftUI, TypeScript, JavaScript, SQL, Bash, HTML5/CSS \\
+  \textbf{ML \& Data:} & PyTorch, scikit-learn, Pandas, NumPy, DuckDB, MongoDB, ONNX Runtime Web, embeddings \& vector search \\
   \textbf{Quant \& Methods:} & Linear algebra, statistics \& probability, A/B testing, data structures \& algorithms \\
-  \textbf{Web \& Mobile:} & Node.js, Next.js, React, iOS/SwiftUI, Xcode, REST \& client--server API design \\
-  \textbf{Tools \& Platforms:} & Git, GitHub Actions, Docker, Linux/Unix, Supabase, Vercel, Stripe, Cloudflare R2 \quad \textbf{Cert:} AHA BLS \\
-\end{tabular*}
+  \textbf{Web \& Mobile:} & Node.js, Next.js, React, Flask, Fastify, iOS/SwiftUI, Xcode, Chrome Extensions, REST API design \\
+  \textbf{Tools \& Platforms:} & Git, GitHub Actions, Docker, Linux/Unix, Supabase, Vercel, Stripe, Cloudflare R2, GCP/OAuth \\
+  \textbf{Systems \& Homelab:} & Raspberry Pi, OpenMediaVault (NAS), Tailscale, Pi-hole, Justfile, uv \quad \textbf{Cert:} AHA BLS \\
+\end{tabular}
 
 \end{document}
