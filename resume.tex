@@ -83,29 +83,26 @@
   \resumeItem{Improved team reproducibility, as measured by zero environment-setup issues across contributors, by standardizing workflows with Justfile task runners, uv-managed Python environments, and PR-based collaboration on GitHub.}
 \resumeItemListEnd
 
-\resumeSubheading
-  {Finance Director}{Various Roles within the ASUC}{Sept 2024 -- Present}{}
-\resumeItemListStart
-  \resumeItem{Administered approximately \$200,000 in student organization funding, as measured by on-time grant disbursements and zero compliance violations, by managing CASSA allocations and awarding grants to student-led proposals across two orgs.}
-\resumeItemListEnd
-
 \section{Projects}
 \resumeSubheadingSimple
-  {Canvascope, Lectra \& PersonalGraph MCP --- \small\href{https://canvascope.org}{canvascope.org}}{Founder / CEO / Lead Developer}
+  {Canvascope \& Lectra --- \small\href{https://canvascope.org}{canvascope.org}}{Founder / CEO / Lead Developer}
 \resumeItemListStart
   \resumeItem{Grew Canvascope to 46 active users across 10+ university Canvas domains by founding a privacy-first AI study assistant (Chrome extension, Manifest V3) with GCP OAuth authentication, local-first indexing, and sub-100ms semantic search.}
   \resumeItem{Achieved citation-grounded AI responses, as measured by every answer linking to its source document, by designing a RAG pipeline that indexes course PDFs, pages, and assignments into vector embeddings and retrieves relevant context at query time.}
-  \resumeItem{Reduced cloud inference costs and improved user privacy by integrating Chrome's built-in Gemini Nano for on-device AI and building personalized learning workflows that adapt to a student's academic background and learning style.}
-  \resumeItem{Enabled cross-device study workflows by developing Lectra (iOS/iPad) with Apple Pencil annotation, DropBridge --- a custom high-speed cross-device file-transfer protocol --- and a Supabase backend for real-time sync of annotated PDFs.}
-  \resumeItem{Built a sandboxed on-device coding IDE inside Lectra (iOS) --- a from-scratch POSIX shell, real git via isomorphic-git bridged to native Swift over a WKWebView, and an embedded Python runtime, all confined to the app sandbox.}
-  \resumeItem{Built PersonalGraph, a TypeScript MCP server that gives AI assistants a persistent personal knowledge graph --- 15 tools/resources, a four-tier visibility lattice with secret redaction and sensitive-topic auto-classification, crash-safe atomic writes, and an append-only audit log.}
+  \resumeItem{Developed Lectra (iOS/iPad) for cross-device study workflows --- Apple Pencil annotation synced in real time via Supabase and DropBridge, a custom high-speed file-transfer protocol --- alongside a sandboxed on-device coding workspace: a from-scratch POSIX-style shell dispatching git/python, real git via isomorphic-git bridged to native Swift with GitHub OAuth, and a native Jupyter notebook UI running CPython via Pyodide (WASM), validated by 24 automated tests.}
 \resumeItemListEnd
 
 \resumeSubheadingSimple
-  {RxBrief --- \small\href{https://www.rxbrief.org/}{rxbrief.org}}{Co-Founder / CTO}
+  {PersonalGraph MCP --- \small\href{https://github.com/NoelSason/MCP}{github.com/NoelSason/MCP}}{Creator}
 \resumeItemListStart
-  \resumeItem{Delivered instant drug-label access and consolidated job discovery from 3 sources by building a full-stack platform with a live FDA API, real-time Supabase chat, and client--server REST integrations (Greenhouse, Lever, RSS) with server-side filtering.}
-  \resumeItem{Translated clinical workflows into engineering requirements by interviewing healthcare professionals, directly shaping product scope and task prioritization.}
+  \resumeItem{Built a local-first MCP server exposing 16 tools, 5 resources, and 4 prompt templates over a typed personal-knowledge graph (nodes/edges with confidence, source, and visibility metadata), validated end-to-end with a live-stdio-protocol smoke test, and adopted as the active memory backend for a production AI coding assistant session.}
+  \resumeItem{Designed a four-tier privacy model (public/ai\_allowed/private/sensitive) with double-gated sensitive-data access, input-boundary secret redaction, and append-only audit logging, then decoupled persistence behind a \texttt{GraphStore} interface to allow a documented, code-free migration path from JSON to Neo4j/SQLite/Postgres.}
+\resumeItemListEnd
+
+\resumeSubheadingSimple
+  {SCI Cause-List Alerts}{Creator}
+\resumeItemListStart
+  \resumeItem{Designed and built an end-to-end Next.js/Prisma/Postgres alert pipeline, bot-protected and rate-limited (Cloudflare Turnstile, Upstash Redis), that parses government-published court PDFs and emails subscribers the moment their case is listed, achieving idempotent delivery verified by a Vitest parser suite --- built to reach litigants who lack easy access to legal counsel or repeated court-website checks.}
 \resumeItemListEnd
 
 \resumeSubheadingSimple
